@@ -1,0 +1,2023 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+		<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+		<title>Proponentes</title>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<div class="header-left">
+					<a href="#" class="link_logo"><img src="img/logo.png" alt="logo samplemed"></a>
+					<p class="usuario">Olá,<span class="nome_usuario"> João Khun</span></p>
+				</div>
+				<div class="header-right">
+					<a href="#"><img src="img/br.jpg" alt="site em português"></a>
+					<a href="#"><img src="img/us.jpg" alt="site em inglês"></a>
+					<ul>
+						<li><a href="#" class="header-alterar_senha">Alterar senha</a></li>
+						<li><a href="#" class="header-sair">Sair</a></li>
+					</ul>
+				</div>
+				<div class="clear"></div>
+				<nav>
+					<ul>
+						<li><a href="#" class="header-proponente">Proponentes</a></li>
+						<li><a href="dashboard.html" class="header-dashboard">Dashboard</a></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="content">
+				<h1 class="titulo_pagina">buscar proponente</h1>
+				<section class="lista-prop_form-leg">
+					<form action="#" method="POST" class="lista-prop_form">
+						<ul>
+							<li> <input type="text" class="lista-prop_form-input input-large" placeholder="Nome"></li>
+							<li> <input type="text" class="lista-prop_form-input input-small" placeholder="CPF"></li>
+							<li> <input type="text" class="lista-prop_form-input input-small" placeholder="Data inicial"></li>
+							<li> <input type="text" class="lista-prop_form-input input-small" placeholder="Data final"></li>
+							<li >
+								<select name="" id="" class="lista-prop_form-select" onChange="mudarBg(this.value)">
+									<option value="" value=" " disabled selected style="display: none;">Seguradora</option>
+									<option value="0">teste</option>
+									<option value="1">teste</option>
+								</select>
+							</li>
+							<li>
+								<select name="" id="" class="lista-prop_form-select">
+									<option value="" value=" " disabled selected style="display: none;">0h á 24h</option>
+									<option value="0">teste</option>
+									<option value="1">teste</option>
+								</select>
+							</li>
+							<li>
+								<select name="" id="" class="lista-prop_form-select">
+									<option value="" value=" " disabled selected style="display: none;">Situação</option>
+									<option value="0">teste</option>
+									<option value="1">teste</option>
+								</select>
+							</li>
+							<li class="select_large">
+								<select name="" id="" class="lista-prop_form-select select_large ">
+									<option value=" " disabled selected style="display: none;">Possui agendamento?</option>
+									<option value="0">Sim</option>
+									<option value="1">Não</option>
+								</select>
+							</li>
+							<li><input type="submit" class="lista-prop_form-buscar" value="Buscar"></li>
+						</ul>
+					</form>
+					<div class="lista-prop_leg">
+						<h1>Legenda</h1>
+						<ul>
+							<li class="large-leg"><img src="img/alerta.png" alt="">Prioridade no atendimento</li>
+							<li class="small-leg"><img src="img/chamadas_icon.png" alt="">Chamadas</li>
+							<li class="large-leg"><img src="img/leg_verde.png" alt="">De 0h a  24h</li>
+							<li class="small-leg"><img src="img/leg_amarelo.png" alt="">De 24h a 48h</li>
+							<li class="large-leg"><img src="img/leg_laranja.png" alt="">De 48h a 72h</li>
+							<li class="small-leg"><img src="img/leg_vermelho.png" alt="">Acima de 72h</li>
+						</ul>
+					</div>
+					<div class="clear"></div>
+				</section>
+				<section class="lista-prop_lista-de-clientes">
+					<ul class="lista-prop_Upper-content">
+						<li class="lista-prop_form-visualizar ">
+							<select name="" id="" class="lista-prop_form-select">
+								<option value="0">Visualizar 10</option>
+								<option value="1">Visualizar 25-50</option>
+							</select>
+						</li>
+						<li class="lista-prop_caixa_lista">
+							<ul class="lista-prop_menu-lista">
+								<li><img src="img/<.png" alt=""></li>
+								<li class="lista-prop_menu-lista-focus">1</li>
+								<li>2</li>
+								<li>3</li>
+								<li>4</li>
+								<li>5</li>
+								<li>6</li>
+								<li>7</li>
+								<li>8</li>
+								<li>9</li>
+								<li>10</li>
+								<li><img src="img/>.png" alt=""></li>
+							</ul>
+						</li>
+						<li class="lista-prop-resultado"><p><span>157</span> resultados</p></li>
+					</ul>
+					<div class="lista-prop_lista-container">
+						<ul class="lista-prop_lista" style="display: block;">
+							<li>
+								<ul class="lista-prop_lista_titulo-itens">
+									<li class="lista-prop_lista_titulo-itens-cliente">Cliente <img src="img/v-icon.png" alt=""> </li>
+									<li class="lista-prop_lista_titulo-itens-nome">Nome<img src="img/v-icon.png" alt=""> </li>
+									<li class="lista-prop_lista_titulo-itens-cpf">CPF<img src="img/v-icon.png" alt=""> </li>
+									<li class="lista-prop_lista_titulo-itens-tempo-cadastro">Cadastrado há<img src="img/v-icon.png" alt=""> </li>
+									<li class="lista-prop_lista_titulo-itens-situacao">Situação<img src="img/v-icon.png" alt=""> </li>
+									<li class="lista-prop_lista_titulo-itens-acoes">Ações<img src="img/v-icon.png" alt=""> </li>
+								</ul>
+								
+							</li>
+							<li class="red_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente"><span class="alerta"><img src="img/alerta.png" alt=""></span>1</li>
+									<li class="lista_itens_nome">Mari Mariano</li>
+									<li class="lista_itens_cpf">112.345.678-90</li>
+									<li class="lista_itens_tempo-cadastro">96h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="red_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente"><span class="alerta"><img src="img/alerta.png" alt=""></span>Previsul</li>
+									<li class="lista_itens_nome">Renata Micheleto Marques</li>
+									<li class="lista_itens_cpf">112.345.678-90</li>
+									<li class="lista_itens_tempo-cadastro">72h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/novo-icon.png" alt=""><span>Novo</span></li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="orange_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Libert Seguros</li>
+									<li class="lista_itens_nome">Rodrigo David de Oliveira</li>
+									<li class="lista_itens_cpf">112.345.678-90</li>
+									<li class="lista_itens_tempo-cadastro">71h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/parecer-seguradora-icon.png" alt=""><span>Parecer Seguradora</span></li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="orange_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Icatu</li>
+									<li class="lista_itens_nome">Simone Pereira De Macedo Carvalho</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">48h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/em-andamento-icon.png" alt=""><span>Em andamendo</span></li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="yellow_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Icatu</li>
+									<li class="lista_itens_nome">Victor Corradi</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">47h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/parecer-medico-icon.png" alt=""><span>Parecer Médico</span></li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="yellow_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Mongeral</li>
+									<li class="lista_itens_nome">Vivian Missfeldt Schwartz</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">23h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/concluido-icon.png" alt=""><span class="situacao-concluido">Concluído</span></li>
+											<li>em 09/05/2015, 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="green_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Mapfre</li>
+									<li class="lista_itens_nome">William Brombal Chinelato</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">24h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/parecer-seguradora-icon.png" alt=""><span>Parecer Resseguradora</span></li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="green_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Libert Seguros</li>
+									<li class="lista_itens_nome">Selma De Oliveira Nogueira</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">20h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/em-andamento-icon.png" alt=""><span>Em andamendo</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="green_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Icatu</li>
+									<li class="lista_itens_nome">Victor Corradi</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">23h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/parecer-medico-icon.png" alt=""><span>Parecer Médico</span></li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="green_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Mapfre</li>
+									<li class="lista_itens_nome">Selma De Oliveira Nogueira</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">10h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span class="situacao-concluido">Concluído</span></li>
+											<li> em 09/05/2015, às 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<!-- tab 2 -->
+						<ul class="lista-prop_lista">
+							<li>
+								<ul class="lista-prop_lista_titulo-itens">
+									<li class="lista-prop_lista_titulo-itens-cliente">Cliente <img src="img/v-icon.png" alt=""> </li>
+									<li class="lista-prop_lista_titulo-itens-nome">Nome<img src="img/v-icon.png" alt=""> </li>
+									<li class="lista-prop_lista_titulo-itens-cpf">CPF<img src="../img/v-icon.png" alt=""> </li>
+									<li class="lista-prop_lista_titulo-itens-tempo-cadastro">Cadastrado há<img src="img/v-icon.png" alt=""> </li>
+									<li class="lista-prop_lista_titulo-itens-situacao">Situação<img src="img/v-icon.png" alt=""> </li>
+									<li class="lista-prop_lista_titulo-itens-acoes">Ações<img src="img/v-icon.png" alt=""> </li>
+								</ul>
+								
+							</li>
+							<li class="red_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente"><span class="alerta"><img src="img/alerta.png" alt=""></span>2</li>
+									<li class="lista_itens_nome">Simone Pereira De Macedo Carvalho</li>
+									<li class="lista_itens_cpf">112.345.678-90</li>
+									<li class="lista_itens_tempo-cadastro">96h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li>
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">teste</a></li>
+													<li><a href="#">teste</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="red_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente"><span class="alerta"><img src="img/alerta.png" alt=""></span>Previsul</li>
+									<li class="lista_itens_nome">Renata Micheleto Marques</li>
+									<li class="lista_itens_cpf">112.345.678-90</li>
+									<li class="lista_itens_tempo-cadastro">72h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="orange_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Libert Seguros</li>
+									<li class="lista_itens_nome">Rodrigo David de Oliveira</li>
+									<li class="lista_itens_cpf">112.345.678-90</li>
+									<li class="lista_itens_tempo-cadastro">71h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="orange_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Icatu</li>
+									<li class="lista_itens_nome">Simone Pereira De Macedo Carvalho</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">48h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="yellow_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Icatu</li>
+									<li class="lista_itens_nome">Victor Corradi</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">47h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li>
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">teste</a></li>
+													<li><a href="#">teste</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="yellow_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Mongeral</li>
+									<li class="lista_itens_nome">Vivian Missfeldt Schwartz</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">23h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="green_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Mapfre</li>
+									<li class="lista_itens_nome">William Brombal Chinelato</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">24h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="green_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Libert Seguros</li>
+									<li class="lista_itens_nome">Selma De Oliveira Nogueira</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">20h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="green_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Icatu</li>
+									<li class="lista_itens_nome">Victor Corradi</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">23h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="green_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Mapfre</li>
+									<li class="lista_itens_nome">Selma De Oliveira Nogueira</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">10h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<!-- tab 3 -->
+						<ul class="lista-prop_lista">
+							<li>
+								<ul class="lista-prop_lista_titulo-itens">
+									<li class="lista-prop_lista_titulo-itens-cliente">Cliente <img src="img/v-icon.png" alt=""> </li>
+									<li class="lista-prop_lista_titulo-itens-nome">Nome<img src="img/v-icon.png" alt=""> </li>
+									<li class="lista-prop_lista_titulo-itens-cpf">CPF<img src="img/v-icon.png" alt=""> </li>
+									<li class="lista-prop_lista_titulo-itens-tempo-cadastro">Cadastrado há<img src="img/v-icon.png" alt=""> </li>
+									<li class="lista-prop_lista_titulo-itens-situacao">Situação<img src="img/v-icon.png" alt=""> </li>
+									<li class="lista-prop_lista_titulo-itens-acoes">Ações<img src="img/v-icon.png" alt=""> </li>
+								</ul>
+								
+							</li>
+							<li class="red_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente"><span class="alerta"><img src="img/alerta.png" alt=""></span>3</li>
+									<li class="lista_itens_nome">Rodrigo David de Oliveira</li>
+									<li class="lista_itens_cpf">112.345.678-90</li>
+									<li class="lista_itens_tempo-cadastro">96h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li>
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">teste</a></li>
+													<li><a href="#">teste</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="red_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente"><span class="alerta"><img src="img/alerta.png" alt=""></span>Previsul</li>
+									<li class="lista_itens_nome">Renata Micheleto Marques</li>
+									<li class="lista_itens_cpf">112.345.678-90</li>
+									<li class="lista_itens_tempo-cadastro">72h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="orange_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Libert Seguros</li>
+									<li class="lista_itens_nome">Rodrigo David de Oliveira</li>
+									<li class="lista_itens_cpf">112.345.678-90</li>
+									<li class="lista_itens_tempo-cadastro">71h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="orange_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Icatu</li>
+									<li class="lista_itens_nome">Simone Pereira De Macedo Carvalho</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">48h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="yellow_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Icatu</li>
+									<li class="lista_itens_nome">Victor Corradi</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">47h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="yellow_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Mongeral</li>
+									<li class="lista_itens_nome">Vivian Missfeldt Schwartz</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">23h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="green_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Mapfre</li>
+									<li class="lista_itens_nome">William Brombal Chinelato</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">24h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="green_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Libert Seguros</li>
+									<li class="lista_itens_nome">Selma De Oliveira Nogueira</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">20h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="green_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Icatu</li>
+									<li class="lista_itens_nome">Victor Corradi</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">23h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="green_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Mapfre</li>
+									<li class="lista_itens_nome">Selma De Oliveira Nogueira</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">10h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<!-- tab 4 -->
+						<ul class="lista-prop_lista">
+							<li>
+								<ul class="lista-prop_lista_titulo-itens">
+									<li class="lista-prop_lista_titulo-itens-cliente">Cliente <img src="img/v-icon.png" alt=""> </li>
+									<li class="lista-prop_lista_titulo-itens-nome">Nome<img src="img/v-icon.png" alt=""> </li>
+									<li class="lista-prop_lista_titulo-itens-cpf">CPF<img src="img/v-icon.png" alt=""> </li>
+									<li class="lista-prop_lista_titulo-itens-tempo-cadastro">Cadastrado há<img src="img/v-icon.png" alt=""> </li>
+									<li class="lista-prop_lista_titulo-itens-situacao">Situação<img src="img/v-icon.png" alt=""> </li>
+									<li class="lista-prop_lista_titulo-itens-acoes">Ações<img src="img/v-icon.png" alt=""> </li>
+								</ul>
+								
+							</li>
+							<li class="red_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente"><span class="alerta"><img src="img/alerta.png" alt=""></span>4</li>
+									<li class="lista_itens_nome">Victor Corradi</li>
+									<li class="lista_itens_cpf">112.345.678-90</li>
+									<li class="lista_itens_tempo-cadastro">96h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li>
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">teste</a></li>
+													<li><a href="#">teste</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="red_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente"><span class="alerta"><img src="img/alerta.png" alt=""></span>Previsul</li>
+									<li class="lista_itens_nome">Renata Micheleto Marques</li>
+									<li class="lista_itens_cpf">112.345.678-90</li>
+									<li class="lista_itens_tempo-cadastro">72h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="orange_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Libert Seguros</li>
+									<li class="lista_itens_nome">Rodrigo David de Oliveira</li>
+									<li class="lista_itens_cpf">112.345.678-90</li>
+									<li class="lista_itens_tempo-cadastro">71h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="orange_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Icatu</li>
+									<li class="lista_itens_nome">Simone Pereira De Macedo Carvalho</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">48h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="yellow_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Icatu</li>
+									<li class="lista_itens_nome">Victor Corradi</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">47h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="yellow_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Mongeral</li>
+									<li class="lista_itens_nome">Vivian Missfeldt Schwartz</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">23h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="green_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Mapfre</li>
+									<li class="lista_itens_nome">William Brombal Chinelato</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">24h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="green_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Libert Seguros</li>
+									<li class="lista_itens_nome">Selma De Oliveira Nogueira</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">20h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="green_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Icatu</li>
+									<li class="lista_itens_nome">Victor Corradi</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">23h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="green_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Mapfre</li>
+									<li class="lista_itens_nome">Selma De Oliveira Nogueira</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">10h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li >
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">Chamadas</a></li>
+													<li><a href="#">Resposta</a></li>
+													<li><a href="#">Arquivos</a></li>
+													<li><a href="#">Situação</a></li>
+													<li><a href="#">Ver</a></li>
+													<li><a href="#">Novos telefones</a></li>
+													<li><a href="#">Comentários</a></li>
+													<li><a href="#">Qualidade</a></li>
+													<li><a href="#">Cancelar Prop.</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<!-- tab 5 -->
+						<ul class="lista-prop_lista">
+							<li>
+								<ul class="lista-prop_lista_titulo-itens">
+									<li class="lista-prop_lista_titulo-itens-cliente">Cliente <img src="img/v-icon.png" alt=""> </li>
+									<li class="lista-prop_lista_titulo-itens-nome">Nome<img src="img/v-icon.png" alt=""> </li>
+									<li class="lista-prop_lista_titulo-itens-cpf">CPF<img src="img/v-icon.png" alt=""> </li>
+									<li class="lista-prop_lista_titulo-itens-tempo-cadastro">Cadastrado há<img src="img/v-icon.png" alt=""> </li>
+									<li class="lista-prop_lista_titulo-itens-situacao">Situação<img src="img/v-icon.png" alt=""> </li>
+									<li class="lista-prop_lista_titulo-itens-acoes">Ações<img src="img/v-icon.png" alt=""> </li>
+								</ul>
+								
+							</li>
+							<li class="red_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente"><span class="alerta"><img src="img/alerta.png" alt=""></span>Mongeral</li>
+									<li class="lista_itens_nome">Selma De Oliveira Nogueira</li>
+									<li class="lista_itens_cpf">112.345.678-90</li>
+									<li class="lista_itens_tempo-cadastro">96h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li>
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">teste</a></li>
+													<li><a href="#">teste</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="red_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente"><span class="alerta"><img src="img/alerta.png" alt=""></span>Previsul</li>
+									<li class="lista_itens_nome">Renata Micheleto Marques</li>
+									<li class="lista_itens_cpf">112.345.678-90</li>
+									<li class="lista_itens_tempo-cadastro">72h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li>
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">teste</a></li>
+													<li><a href="#">teste</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="orange_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Libert Seguros</li>
+									<li class="lista_itens_nome">Rodrigo David de Oliveira</li>
+									<li class="lista_itens_cpf">112.345.678-90</li>
+									<li class="lista_itens_tempo-cadastro">71h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li>
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">teste</a></li>
+													<li><a href="#">teste</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="orange_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Icatu</li>
+									<li class="lista_itens_nome">Simone Pereira De Macedo Carvalho</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">48h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li>
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">teste</a></li>
+													<li><a href="#">teste</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="yellow_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Icatu</li>
+									<li class="lista_itens_nome">Victor Corradi</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">47h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li>
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">teste</a></li>
+													<li><a href="#">teste</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="yellow_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Mongeral</li>
+									<li class="lista_itens_nome">Vivian Missfeldt Schwartz</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">23h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li>
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">teste</a></li>
+													<li><a href="#">teste</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="green_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Mapfre</li>
+									<li class="lista_itens_nome">William Brombal Chinelato</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">24h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li>
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">teste</a></li>
+													<li><a href="#">teste</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="green_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Libert Seguros</li>
+									<li class="lista_itens_nome">Selma De Oliveira Nogueira</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">20h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li>
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">teste</a></li>
+													<li><a href="#">teste</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="green_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Icatu</li>
+									<li class="lista_itens_nome">Victor Corradi</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">23h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li>
+												Opções
+												<ul class="lista-prop-opcoes" style="display: block;">
+													<li><a href="#">teste</a></li>
+													<li><a href="#">teste</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="green_border">
+								<ul class="lista-prop_lista_itens">
+									<li  class="prop-item_cliente">Mapfre</li>
+									<li class="lista_itens_nome">Selma De Oliveira Nogueira</li>
+									<li class="lista_itens_cpf">327.743.798-11</li>
+									<li class="lista_itens_tempo-cadastro">10h</li>
+									<li  class="lista_itens_situacao">
+										<ul>
+											<li><img src="img/agendado-icon.png" alt=""><span>Agendado</span></li>
+											<li> para 09/05/2015, ás 19h00</li>
+											<li class="itens_situacao-chamadas"><img src="img/chamadas_icon.png" alt=""><span>0/15</span></li>
+										</ul>
+									</li>
+									<li class="lista-prop_caixa_opcoes">
+										<div class="bt-ler oculto">
+											<a href="#">Ler</a>
+											<span class="numero-bt-ler">15</span>
+										</div>
+										<ul  class="lista-prop_lista-opcoes inativo">
+											<li>
+												Opções
+												<ul class="lista-prop-opcoes">
+													<li><a href="#">teste</a></li>
+													<li><a href="#">teste</a></li>
+												</ul>
+												
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					
+				</section>
+				<div class="clear"></div>
+				<div class="lista-prop_leg2">
+					<ul>
+						<li class="leg2_titulo"><h1>Legenda</h1></li>
+						<li><img src="img/alerta.png" alt="">Prioridade no atendimento</li>
+						<li><img src="img/chamadas_icon.png" alt="">Chamadas</li>
+						<li><img src="img/leg_verde.png" alt="">De 0h a  24h</li>
+						<li><img src="img/leg_amarelo.png" alt="">De 24h a 48h</li>
+						<li><img src="img/leg_laranja.png" alt="">De 48h a 72h</li>
+						<li><img src="img/leg_vermelho.png" alt="">Acima de 72h</li>
+					</ul>
+				</div>
+				<ul class="lista-prop_Upper-content  lista_bottom">
+					<li class="lista-prop_form-visualizar">
+						<select name="" id="" class="lista-prop_form-select">
+							<option value="0">Visualizar 10</option>
+							<option value="1">Visualizar 25-50</option>
+						</select>
+					</li>
+					<li class="lista-prop_caixa_lista ">
+						
+						<ul class="lista-prop_menu-lista slider-nav">
+							<li class="lista-prop_menu-lista-focus">1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+							<li>6</li>
+							<li>7</li>
+							<li>8</li>
+							<li>9</li>
+							<li>10</li>
+						</ul>
+						
+					</li>
+					<li class="lista-prop-resultado"><p><span>157</span> resultados</p></li>
+				</ul>
+			</div>
+		</div>
+		<script src="js/geral.js" ></script>
+	</body>
+</html>

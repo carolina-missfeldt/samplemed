@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>calendario</title>
+		<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+		<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+		<style>
+			body{
+			  background-image: url(../img/bg-modal.png);
+			}
+
+			* {
+				box-sizing: border-box;
+				list-style: none;
+			}
+			.janela_calendario {
+				max-width: 581px;
+			}
+			.calendario {
+				width: 50%;
+				overflow: hidden;
+				
+			}
+
+			.janela_calendario li > div {
+				display: inline-block;
+				vertical-align: top;
+			}
+
+			.mes {
+				text-align: center;
+				font-size: 24px;
+				text-transform: uppercase;
+				color: #fff;
+				background-color: #244599;
+				font-family:'Raleway', sans-serif;
+				padding: 15px 0;
+				font-weight: 300;
+
+			}
+
+			#previous {
+				width: 20px;
+				height: 20px;
+				display: inline-block;
+				background-image: url(../img/<-modal.png);
+				background-repeat: no-repeat;
+				background-position: left;
+				
+			}
+
+			#next {
+				width: 20px;
+				height: 20px;
+				display: inline-block;
+				background-image: url(../img/>-modal.png);
+				background-repeat: no-repeat;
+				background-position: right;
+			}
+
+			.ano {
+				font-size: 16px;
+			}
+
+			.tabela_calendario {
+				background-color: #f5f5f5;
+				padding: 15px;
+				width: 101%;
+				margin: 0 auto;
+			}
+
+			.tabela_calendario th,td {
+				padding: 0.5em;
+				text-align: center;
+				font-family:'Raleway', sans-serif;
+				vertical-align: top;
+			}
+
+			.semana {
+				color: #244599;
+				text-transform: uppercase;
+				font-size: 10px;
+				font-weight: 300;
+			}
+			.dia {
+				font-size: 14px;
+				color: #555555;
+			}
+
+			.mes-anterior-proximo {
+				color: #bababa;
+			}
+
+			.dia_selecionado {
+				background-image: url(../img/ellipse_grande.png);
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+
+			.dia_atual {
+				background-image: url(../img/ellipse_peq.png);
+				background-repeat: no-repeat;
+				background-position: right;
+			}
+
+			.hora {
+				width: auto;
+				padding: 10px 20px;
+				background-color: #fff;
+				font-family:'Raleway', sans-serif;
+			}
+
+			.hora p {
+				font-size: 16px;
+				color: #244599;
+				text-transform: uppercase;
+				display: inline-block;
+				margin-right: 10px;
+
+			}
+
+			.hora select {
+				 -webkit-appearance: none;
+				 appearance: none;
+				 padding: 5px 20px 5px 5px;
+				 font-size: 14px;
+				 background-color: transparent;
+			    background-image: url(../img/v-icon.png);
+			    background-repeat: no-repeat;
+			    background-position: 85%;
+			    outline: none;
+
+			}
+
+			.confirmar {
+				width: 49%;
+				background-color: transparent;
+				text-align: center;
+				padding-left: 20px;
+				font-family:'Raleway', sans-serif;
+			}
+
+			.confirmar_data {
+				font-size: 56px;
+				color: #6989d7;
+				margin: 0;
+			}
+
+			.confirmar_dia {
+				color: #fff;
+				font-size: 71px;
+			}
+
+			.confirmar_mes {
+				color: #fff;
+				font-size: 56px;
+				text-transform: uppercase;
+			}
+
+			.horario{
+				font-size: 44px;
+				color: #fff;
+				margin: 20px 0; 
+
+			}
+
+			.confirmar_hora {
+				font-size: 55px;
+				margin-top: 0;
+			}
+
+			.botao_confirmar {
+				width: 90%;
+				background-color: #ff6b6b;
+				color: #fff;
+				border: none;
+				padding: 10px 0;
+				font-size: 14px;
+				border-radius: 4px;
+				outline: none;
+				cursor: pointer;
+
+			}
+
+
+
+		</style>
+	</head>
+	<body>
+		<div class="janela_calendario" id="janela_calendario">
+			<ul>
+				<li>
+					<div class="calendario">
+						<div class="mes" style="display: block;"><a href="#" id="previous"></a>Janeiro<a href="#" id="next"></a>
+							<div class="ano">2017</div>
+						</div>
+							<table class="tabela_calendario" cellspacing="0" style="display: block;">
+								<tr>
+									<th class="semana">dom</th>
+									<th class="semana">seg</th>
+									<th class="semana">ter</th>
+									<th class="semana">qua</th>
+									<th class="semana">qui</th>
+									<th class="semana">sex</th>
+									<th class="semana">sáb</th>
+								</tr>
+								<tr>
+									<td class="dia">1</td>
+									<td class="dia">2</td>
+									<td class="dia">3</td>
+									<td class="dia">4</td>
+									<td class="dia">5</td>
+									<td class="dia">6</td>
+									<td class="dia dia_atual">7</td>
+								</tr>
+								<tr>
+									<td class="dia">8</td>
+									<td class="dia">9</td>
+									<td class="dia">10</td>
+									<td class="dia">11</td>
+									<td class="dia">12</td>
+									<td class="dia">13</td>
+									<td class="dia">14</td>
+								</tr>
+								<tr>
+									<td class="dia">15</td>
+									<td class="dia">16</td>
+									<td class="dia">17</td>
+									<td class="dia">18</td>
+									<td class="dia">19</td>
+									<td class="dia">20</td>
+									<td class="dia">21</td>
+								</tr>
+								<tr>
+									<td class="dia dia_selecionado">22</td>
+									<td class="dia">23</td>
+									<td class="dia">24</td>
+									<td class="dia">25</td>
+									<td class="dia">26</td>
+									<td class="dia">27</td>
+									<td class="dia">28</td>
+								</tr>
+								<tr>
+									<td class="dia">29</td>
+									<td class="dia">30</td>
+									<td class="dia">31</td>
+									<td class="dia mes-anterior-proximo">1</td>
+									<td class="dia mes-anterior-proximo">2</td>
+									<td class="dia mes-anterior-proximo">3</td>
+									<td class="dia mes-anterior-proximo">4</td>
+								</tr>
+
+							</table>
+							<!--fevereiro-->
+							<div class="mes"><a href="#" id="previous"></a>Fevereiro<a href="#" id="next"></a>
+								<div class="ano">2017</div>
+							</div>
+							<table class="tabela_calendario" cellspacing="0">
+								<tr>
+									<th class="semana">dom</th>
+									<th class="semana">seg</th>
+									<th class="semana">ter</th>
+									<th class="semana">qua</th>
+									<th class="semana">qui</th>
+									<th class="semana">sex</th>
+									<th class="semana">sáb</th>
+								</tr>
+								<tr>
+									<td class="dia mes-anterior-proximo">29</td>
+									<td class="dia mes-anterior-proximo">30</td>
+									<td class="dia mes-anterior-proximo">31</td>
+									<td class="dia">1</td>
+									<td class="dia">2</td>
+									<td class="dia">3</td>
+									<td class="dia">4</td>
+								</tr>
+								<tr>
+									<td class="dia">5</td>
+									<td class="dia">6</td>
+									<td class="dia">7</td>
+									<td class="dia">8</td>
+									<td class="dia">9</td>
+									<td class="dia">10</td>
+									<td class="dia">11</td>
+								</tr>
+								<tr>
+									<td class="dia">12</td>
+									<td class="dia">13</td>
+									<td class="dia">14</td>
+									<td class="dia">15</td>
+									<td class="dia">16</td>
+									<td class="dia">17</td>
+									<td class="dia">18</td>
+								</tr>
+								<tr>
+									<td class="dia">19</td>
+									<td class="dia">20</td>
+									<td class="dia">21</td>
+									<td class="dia">22</td>
+									<td class="dia">23</td>
+									<td class="dia">24</td>
+									<td class="dia">25</td>
+								</tr>
+								<tr>
+									<td class="dia">26</td>
+									<td class="dia">27</td>
+									<td class="dia">28</td>
+									<td class="dia mes-anterior-proximo">1</td>
+									<td class="dia mes-anterior-proximo">2</td>
+									<td class="dia mes-anterior-proximo">3</td>
+									<td class="dia mes-anterior-proximo">4</td>
+								</tr>
+
+							</table>
+							<!--março-->
+							<div class="mes"><a href="#" id="previous"></a>Março<a href="#" id="next"></a>
+								<div class="ano">2017</div>
+							</div>
+							<table class="tabela_calendario" cellspacing="0">
+								<tr>
+									<th class="semana">dom</th>
+									<th class="semana">seg</th>
+									<th class="semana">ter</th>
+									<th class="semana">qua</th>
+									<th class="semana">qui</th>
+									<th class="semana">sex</th>
+									<th class="semana">sáb</th>
+								</tr>
+								<tr>
+									<td class="dia mes-anterior-proximo">26</td>
+									<td class="dia mes-anterior-proximo">27</td>
+									<td class="dia mes-anterior-proximo">28</td>
+									<td class="dia">1</td>
+									<td class="dia">2</td>
+									<td class="dia">3</td>
+									<td class="dia">4</td>
+								</tr>
+								<tr>
+									<td class="dia">5</td>
+									<td class="dia">6</td>
+									<td class="dia">7</td>
+									<td class="dia">8</td>
+									<td class="dia">9</td>
+									<td class="dia">10</td>
+									<td class="dia">11</td>
+								</tr>
+								<tr>
+									<td class="dia">12</td>
+									<td class="dia">13</td>
+									<td class="dia">14</td>
+									<td class="dia">15</td>
+									<td class="dia">16</td>
+									<td class="dia">17</td>
+									<td class="dia">18</td>
+								</tr>
+								<tr>
+									<td class="dia">19</td>
+									<td class="dia">20</td>
+									<td class="dia">21</td>
+									<td class="dia">22</td>
+									<td class="dia">23</td>
+									<td class="dia">24</td>
+									<td class="dia">25</td>
+								</tr>
+								<tr>
+									<td class="dia">26</td>
+									<td class="dia">27</td>
+									<td class="dia">28</td>
+									<td class="dia">29</td>
+									<td class="dia">30</td>
+									<td class="dia">31</td>
+									<td class="dia mes-anterior-proximo">1</td>
+								</tr>
+
+							</table>
+							<!--abril-->
+							<div class="mes"><a href="#" id="previous"></a>Abril<a href="#" id="next"></a>
+								<div class="ano">2017</div>
+							</div>
+							<table class="tabela_calendario" cellspacing="0">
+								<tr>
+									<th class="semana">dom</th>
+									<th class="semana">seg</th>
+									<th class="semana">ter</th>
+									<th class="semana">qua</th>
+									<th class="semana">qui</th>
+									<th class="semana">sex</th>
+									<th class="semana">sáb</th>
+								</tr>
+								<tr>
+									<td class="dia mes-anterior-proximo">26</td>
+									<td class="dia mes-anterior-proximo">27</td>
+									<td class="dia mes-anterior-proximo">28</td>
+									<td class="dia mes-anterior-proximo">29</td>
+									<td class="dia mes-anterior-proximo">30</td>
+									<td class="dia mes-anterior-proximo">31</td>
+									<td class="dia dia_atual">1</td>
+								</tr>
+								<tr>
+									<td class="dia">2</td>
+									<td class="dia">3</td>
+									<td class="dia">4</td>
+									<td class="dia">5</td>
+									<td class="dia">6</td>
+									<td class="dia">7</td>
+									<td class="dia">8</td>
+								</tr>
+								<tr>
+									<td class="dia">9</td>
+									<td class="dia">10</td>
+									<td class="dia">11</td>
+									<td class="dia">12</td>
+									<td class="dia">13</td>
+									<td class="dia">14</td>
+									<td class="dia">15</td>
+								</tr>
+								<tr>
+									<td class="dia">16</td>
+									<td class="dia">17</td>
+									<td class="dia">18</td>
+									<td class="dia">19</td>
+									<td class="dia">20</td>
+									<td class="dia">21</td>
+									<td class="dia">22</td>
+								</tr>
+								<tr>
+									<td class="dia">23</td>
+									<td class="dia">24</td>
+									<td class="dia">25</td>
+									<td class="dia">26</td>
+									<td class="dia">27</td>
+									<td class="dia">28</td>
+									<td class="dia">29</td>
+								</tr>
+								<tr>
+									<td class="dia">30</td>
+									<td class="dia mes-anterior-proximo">1</td>
+									<td class="dia mes-anterior-proximo">2</td>
+									<td class="dia mes-anterior-proximo">3</td>
+									<td class="dia mes-anterior-proximo">4</td>
+									<td class="dia mes-anterior-proximo">5</td>
+									<td class="dia mes-anterior-proximo">6</td>
+								</tr>
+
+							</table>
+							<!--maio-->
+							<div class="mes"><a href="#" id="previous"></a>Maio<a href="#" id="next"></a>
+								<div class="ano">2017</div>
+							</div>
+							<table class="tabela_calendario" cellspacing="0">
+								<tr>
+									<th class="semana">dom</th>
+									<th class="semana">seg</th>
+									<th class="semana">ter</th>
+									<th class="semana">qua</th>
+									<th class="semana">qui</th>
+									<th class="semana">sex</th>
+									<th class="semana">sáb</th>
+								</tr>
+								<tr>
+
+									<td class="dia mes-anterior-proximo">30</td>
+									<td class="dia">1</td>
+									<td class="dia">2</td>
+									<td class="dia">3</td>
+									<td class="dia">4</td>
+									<td class="dia">5</td>
+									<td class="dia dia_atual">6</td>
+								</tr>
+								<tr>
+									<td class="dia">7</td>
+									<td class="dia">8</td>
+									<td class="dia">9</td>
+									<td class="dia">10</td>
+									<td class="dia">11</td>
+									<td class="dia">12</td>
+									<td class="dia">13</td>
+								</tr>
+								<tr>
+									<td class="dia">14</td>
+									<td class="dia">15</td>
+									<td class="dia">16</td>
+									<td class="dia">17</td>
+									<td class="dia">18</td>
+									<td class="dia">19</td>
+									<td class="dia">20</td>
+								</tr>
+								<tr>
+									<td class="dia">21</td>
+									<td class="dia">22</td>
+									<td class="dia">23</td>
+									<td class="dia">24</td>
+									<td class="dia">25</td>
+									<td class="dia">26</td>
+									<td class="dia">27</td>
+								</tr>
+								<tr>
+									<td class="dia">28</td>
+									<td class="dia">29</td>
+									<td class="dia">30</td>
+									<td class="dia">31</td>
+									<td class="dia mes-anterior-proximo">1</td>
+									<td class="dia mes-anterior-proximo">2</td>
+									<td class="dia mes-anterior-proximo">3</td>
+								</tr>
+
+							</table>
+							<!--junho-->
+							<div class="mes"><a href="#" id="previous"></a>Junho<a href="#" id="next"></a>
+								<div class="ano">2017</div>
+							</div>
+							<table class="tabela_calendario" cellspacing="0">
+								<tr>
+									<th class="semana">dom</th>
+									<th class="semana">seg</th>
+									<th class="semana">ter</th>
+									<th class="semana">qua</th>
+									<th class="semana">qui</th>
+									<th class="semana">sex</th>
+									<th class="semana">sáb</th>
+								</tr>
+								<tr>
+									<td class="dia mes-anterior-proximo">28</td>
+									<td class="dia mes-anterior-proximo">29</td>
+									<td class="dia mes-anterior-proximo">30</td>
+									<td class="dia mes-anterior-proximo">31</td>
+									<td class="dia">1</td>
+									<td class="dia">2</td>
+									<td class="dia">3</td>
+								</tr>
+								<tr>
+									<td class="dia">4</td>
+									<td class="dia">5</td>
+									<td class="dia">6</td>
+									<td class="dia">7</td>
+									<td class="dia">8</td>
+									<td class="dia">9</td>
+									<td class="dia">10</td>
+								</tr>
+								<tr>
+									<td class="dia">11</td>
+									<td class="dia">12</td>
+									<td class="dia">13</td>
+									<td class="dia">14</td>
+									<td class="dia">15</td>
+									<td class="dia">16</td>
+									<td class="dia">17</td>
+								</tr>
+								<tr>
+									<td class="dia">18</td>
+									<td class="dia">19</td>
+									<td class="dia">20</td>
+									<td class="dia">21</td>
+									<td class="dia">22</td>
+									<td class="dia">23</td>
+									<td class="dia">24</td>
+								</tr>
+								<tr>
+									<td class="dia">25</td>
+									<td class="dia">26</td>
+									<td class="dia">27</td>
+									<td class="dia">28</td>
+									<td class="dia">29</td>
+									<td class="dia">30</td>
+									<td class="dia mes-anterior-proximo">1</td>
+								</tr>
+
+							</table>
+							<!--julho-->
+							<div class="mes"><a href="#" id="previous"></a>Julho<a href="#" id="next"></a>
+								<div class="ano">2017</div>
+							</div>
+							<table class="tabela_calendario" cellspacing="0">
+								<tr>
+									<th class="semana">dom</th>
+									<th class="semana">seg</th>
+									<th class="semana">ter</th>
+									<th class="semana">qua</th>
+									<th class="semana">qui</th>
+									<th class="semana">sex</th>
+									<th class="semana">sáb</th>
+								</tr>
+								<tr>
+									<td class="dia mes-anterior-proximo">25</td>
+									<td class="dia mes-anterior-proximo">26</td>
+									<td class="dia mes-anterior-proximo">27</td>
+									<td class="dia mes-anterior-proximo">28</td>
+									<td class="dia mes-anterior-proximo">29</td>
+									<td class="dia mes-anterior-proximo">30</td>
+									<td class="dia">1</td>
+								</tr>
+								<tr>
+									<td class="dia">2</td>
+									<td class="dia">3</td>
+									<td class="dia">4</td>
+									<td class="dia">5</td>
+									<td class="dia">6</td>
+									<td class="dia">7</td>
+									<td class="dia">8</td>
+								</tr>
+								<tr>
+									<td class="dia">9</td>
+									<td class="dia">10</td>
+									<td class="dia">11</td>
+									<td class="dia">12</td>
+									<td class="dia">13</td>
+									<td class="dia">14</td>
+									<td class="dia">15</td>
+								</tr>
+								<tr>
+									<td class="dia">16</td>
+									<td class="dia">17</td>
+									<td class="dia">18</td>
+									<td class="dia">19</td>
+									<td class="dia">20</td>
+									<td class="dia">21</td>
+									<td class="dia">22</td>
+								</tr>
+								<tr>
+									<td class="dia">23</td>
+									<td class="dia">24</td>
+									<td class="dia">25</td>
+									<td class="dia">26</td>
+									<td class="dia">27</td>
+									<td class="dia">28</td>
+									<td class="dia">29</td>
+								</tr>
+								<tr>
+									<td class="dia">30</td>
+									<td class="dia">31</td>
+									<td class="dia mes-anterior-proximo">1</td>
+									<td class="dia mes-anterior-proximo">2</td>
+									<td class="dia mes-anterior-proximo">3</td>
+									<td class="dia mes-anterior-proximo">4</td>
+									<td class="dia mes-anterior-proximo">5</td>
+								</tr>
+
+							</table>
+							<!--agosto-->
+							<div class="mes"><a href="#" id="previous"></a>Agosto<a href="#" id="next"></a>
+								<div class="ano">2017</div>
+							</div>
+							<table class="tabela_calendario" cellspacing="0">
+								<tr>
+									<th class="semana">dom</th>
+									<th class="semana">seg</th>
+									<th class="semana">ter</th>
+									<th class="semana">qua</th>
+									<th class="semana">qui</th>
+									<th class="semana">sex</th>
+									<th class="semana">sáb</th>
+								</tr>
+								<tr>
+									<td class="dia mes-anterior-proximo">30</td>
+									<td class="dia mes-anterior-proximo">31</td>
+									<td class="dia">1</td>
+									<td class="dia">2</td>
+									<td class="dia">3</td>
+									<td class="dia">4</td>
+									<td class="dia">5</td>
+								</tr>
+								<tr>
+									<td class="dia">6</td>
+									<td class="dia">7</td>
+									<td class="dia">8</td>
+									<td class="dia">9</td>
+									<td class="dia">10</td>
+									<td class="dia">11</td>
+									<td class="dia">12</td>
+								</tr>
+								<tr>
+									<td class="dia">13</td>
+									<td class="dia">14</td>
+									<td class="dia">15</td>
+									<td class="dia">16</td>
+									<td class="dia">17</td>
+									<td class="dia">18</td>
+									<td class="dia">19</td>
+								</tr>
+								<tr>
+									<td class="dia dia_selecionado">20</td>
+									<td class="dia">21</td>
+									<td class="dia">22</td>
+									<td class="dia">23</td>
+									<td class="dia">24</td>
+									<td class="dia">25</td>
+									<td class="dia">26</td>
+								</tr>
+								<tr>
+									<td class="dia">27</td>
+									<td class="dia">28</td>
+									<td class="dia">29</td>
+									<td class="dia">30</td>
+									<td class="dia">31</td>
+									<td class="dia mes-anterior-proximo">1</td>
+									<td class="dia mes-anterior-proximo">2</td>
+								</tr>
+
+							</table>
+							<!--setembro-->
+							<div class="mes"><a href="#" id="previous"></a>Setembro<a href="#" id="next"></a>
+								<div class="ano">2017</div>
+							</div>
+							<table class="tabela_calendario" cellspacing="0">
+								<tr>
+									<th class="semana">dom</th>
+									<th class="semana">seg</th>
+									<th class="semana">ter</th>
+									<th class="semana">qua</th>
+									<th class="semana">qui</th>
+									<th class="semana">sex</th>
+									<th class="semana">sáb</th>
+								</tr>
+								<tr>
+									<td class="dia mes-anterior-proximo">27</td>
+									<td class="dia mes-anterior-proximo">28</td>
+									<td class="dia mes-anterior-proximo">29</td>
+									<td class="dia mes-anterior-proximo">31</td>
+									<td class="dia mes-anterior-proximo">31</td>
+									<td class="dia">1</td>
+									<td class="dia">2</td>
+								</tr>
+								<tr>
+									<td class="dia">3</td>
+									<td class="dia">4</td>
+									<td class="dia">5</td>
+									<td class="dia">6</td>
+									<td class="dia">7</td>
+									<td class="dia">8</td>
+									<td class="dia">9</td>
+								</tr>
+								<tr>
+									<td class="dia">10</td>
+									<td class="dia">11</td>
+									<td class="dia">12</td>
+									<td class="dia">13</td>
+									<td class="dia">14</td>
+									<td class="dia">15</td>
+									<td class="dia">16</td>
+								</tr>
+								<tr>
+									<td class="dia dia_selecionado">17</td>
+									<td class="dia">18</td>
+									<td class="dia">19</td>
+									<td class="dia">20</td>
+									<td class="dia">21</td>
+									<td class="dia">22</td>
+									<td class="dia">23</td>
+								</tr>
+								<tr>
+									<td class="dia">24</td>
+									<td class="dia">25</td>
+									<td class="dia">26</td>
+									<td class="dia">27</td>
+									<td class="dia">28</td>
+									<td class="dia">29</td>
+									<td class="dia">30</td>
+								</tr>
+
+							</table>
+							<!--outubro-->
+							<div class="mes"><a href="#" id="previous"></a>Outubro<a href="#" id="next"></a>
+								<div class="ano">2017</div>
+							</div>
+							<table class="tabela_calendario" cellspacing="0">
+								<tr>
+									<th class="semana">dom</th>
+									<th class="semana">seg</th>
+									<th class="semana">ter</th>
+									<th class="semana">qua</th>
+									<th class="semana">qui</th>
+									<th class="semana">sex</th>
+									<th class="semana">sáb</th>
+								</tr>
+								<tr>
+									<td class="dia mes-anterior-proximo">1</td>
+									<td class="dia mes-anterior-proximo">2</td>
+									<td class="dia">3</td>
+									<td class="dia">4</td>
+									<td class="dia">5</td>
+									<td class="dia">6</td>
+									<td class="dia">7</td>
+								</tr>
+								<tr>
+									<td class="dia">8</td>
+									<td class="dia">9</td>
+									<td class="dia">10</td>
+									<td class="dia">11</td>
+									<td class="dia">12</td>
+									<td class="dia">13</td>
+									<td class="dia">14</td>
+								</tr>
+								<tr>
+									<td class="dia">15</td>
+									<td class="dia">16</td>
+									<td class="dia">17</td>
+									<td class="dia">18</td>
+									<td class="dia">19</td>
+									<td class="dia">20</td>
+									<td class="dia">21</td>
+								</tr>
+								<tr>
+									<td class="dia dia_selecionado">22</td>
+									<td class="dia">23</td>
+									<td class="dia">24</td>
+									<td class="dia">25</td>
+									<td class="dia">26</td>
+									<td class="dia">27</td>
+									<td class="dia">28</td>
+								</tr>
+								<tr>
+									<td class="dia">29</td>
+									<td class="dia">30</td>
+									<td class="dia">31</td>
+									<td class="dia mes-anterior-proximo">1</td>
+									<td class="dia mes-anterior-proximo">2</td>
+									<td class="dia mes-anterior-proximo">3</td>
+									<td class="dia mes-anterior-proximo">4</td>
+								</tr>
+
+							</table>
+							<!--novembro-->
+							<div class="mes"><a href="#" id="previous"></a>Novembro<a href="#" id="next"></a>
+								<div class="ano">2017</div>
+							</div>
+							<table class="tabela_calendario" cellspacing="0">
+								<tr>
+									<th class="semana">dom</th>
+									<th class="semana">seg</th>
+									<th class="semana">ter</th>
+									<th class="semana">qua</th>
+									<th class="semana">qui</th>
+									<th class="semana">sex</th>
+									<th class="semana">sáb</th>
+								</tr>
+								<tr>
+									<td class="dia mes-anterior-proximo">29</td>
+									<td class="dia mes-anterior-proximo">30</td>
+									<td class="dia mes-anterior-proximo">31</td>
+									<td class="dia">1</td>
+									<td class="dia">2</td>
+									<td class="dia">3</td>
+									<td class="dia">4</td>
+								</tr>
+								<tr>
+									<td class="dia">5</td>
+									<td class="dia">6</td>
+									<td class="dia">7</td>
+									<td class="dia">8</td>
+									<td class="dia">9</td>
+									<td class="dia">10</td>
+									<td class="dia">11</td>
+								</tr>
+								<tr>
+									<td class="dia">12</td>
+									<td class="dia">13</td>
+									<td class="dia">14</td>
+									<td class="dia">15</td>
+									<td class="dia">16</td>
+									<td class="dia">17</td>
+									<td class="dia">18</td>
+								</tr>
+								<tr>
+									<td class="dia dia_selecionado">19</td>
+									<td class="dia">20</td>
+									<td class="dia">21</td>
+									<td class="dia">22</td>
+									<td class="dia">23</td>
+									<td class="dia">24</td>
+									<td class="dia">25</td>
+								</tr>
+								<tr>
+									<td class="dia">26</td>
+									<td class="dia">27</td>
+									<td class="dia">28</td>
+									<td class="dia">29</td>
+									<td class="dia">30</td>
+									<td class="dia mes-anterior-proximo">1</td>
+									<td class="dia mes-anterior-proximo">2</td>
+								</tr>
+
+							</table>
+							<!--dezembro-->
+							<div class="mes"><a href="#" id="previous"></a>Dezembro<a href="#" id="next"></a>
+								<div class="ano">2017</div>
+							</div>
+							<table class="tabela_calendario" cellspacing="0">
+								<tr>
+									<th class="semana">dom</th>
+									<th class="semana">seg</th>
+									<th class="semana">ter</th>
+									<th class="semana">qua</th>
+									<th class="semana">qui</th>
+									<th class="semana">sex</th>
+									<th class="semana">sáb</th>
+								</tr>
+								<tr>
+									<td class="dia mes-anterior-proximo">26</td>
+									<td class="dia mes-anterior-proximo">27</td>
+									<td class="dia mes-anterior-proximo">28</td>
+									<td class="dia mes-anterior-proximo">29</td>
+									<td class="dia mes-anterior-proximo">30</td>
+									<td class="dia">1</td>
+									<td class="dia">2</td>
+								</tr>
+								<tr>
+									<td class="dia">3</td>
+									<td class="dia">4</td>
+									<td class="dia">5</td>
+									<td class="dia">6</td>
+									<td class="dia">7</td>
+									<td class="dia">8</td>
+									<td class="dia">9</td>
+								</tr>
+								<tr>
+									<td class="dia">10</td>
+									<td class="dia">11</td>
+									<td class="dia">12</td>
+									<td class="dia">13</td>
+									<td class="dia">14</td>
+									<td class="dia">15</td>
+									<td class="dia">16</td>
+								</tr>
+								<tr>
+									<td class="dia dia_selecionado">17</td>
+									<td class="dia">18</td>
+									<td class="dia">19</td>
+									<td class="dia">20</td>
+									<td class="dia">21</td>
+									<td class="dia">22</td>
+									<td class="dia">23</td>
+								</tr>
+								<tr>
+									<td class="dia">24</td>
+									<td class="dia">25</td>
+									<td class="dia">26</td>
+									<td class="dia">27</td>
+									<td class="dia">28</td>
+									<td class="dia">29</td>
+									<td class="dia">30</td>
+								</tr>
+								<tr>
+									<td class="dia">31</td>
+									<td class="dia mes-anterior-proximo">1</td>
+									<td class="dia mes-anterior-proximo">2</td>
+									<td class="dia mes-anterior-proximo">3</td>
+									<td class="dia mes-anterior-proximo">4</td>
+									<td class="dia mes-anterior-proximo">5</td>
+									<td class="dia mes-anterior-proximo">6</td>
+								</tr>
+
+							</table>
+						<div class="hora">
+							<p>horário</p>
+							<select name="hora" id=""> <option value="0">00</option> <option value="1">01</option> <option value="2">02</option> <option value="3">03</option> <option value="4">04</option> <option value="5">05</option> <option value="6">06</option> <option value="7">07</option> <option value="8">08</option> <option value="9">09</option> <option value="10">10</option> <option value="11">11</option> <option value="12">12</option> <option value="13">13</option> <option value="14">14</option> <option value="15">15</option> <option value="16">16</option> <option value="17">17</option> <option value="18">18</option> <option value="19">19</option> <option value="20">20</option> <option value="21">21</option> <option value="22">22</option> <option value="23">23</option> <option value="24">24</option> </select> 
+								:
+							<select name="minuto" id=""> <option value="0">00</option> <option value="2">05</option> <option value="3">10</option> <option value="4">15</option> <option value="5">20</option> <option value="6">25</option> <option value="7">30</option> <option value="8">35</option> <option value="9">40</option> <option value="10">41</option> <option value="11">50</option> <option value="12">55</option> </select> 
+						</div>
+					</div>
+
+					<div class="confirmar">
+						<p class="confirmar_data"><span class="confirmar_dia">22</span>/<span class="confirmar_mes">Jan</span></p>
+						<p class="horario">às <span class="confirmar_hora">00:00</span></p>
+						<button class="botao_confirmar">Confirmar</button>
+					</div>
+
+				</li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</body>
+</html>

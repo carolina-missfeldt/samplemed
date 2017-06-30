@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+		<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+		<script src="js/geral.js" ></script>
+		<script type="text/javascript" src="http://www.gstatic.com/charts/loader.js"></script>
+		<script src="js/graficos.js"></script>
+		<script type="text/javascript">
+		</script>
+		<title>Dashboard</title>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<div class="header-left">
+					<a href="#" class="link_logo"><img src="img/logo.png" alt="logo samplemed"></a>
+					<p class="usuario">Olá,<span class="nome_usuario"> João Khun</span></p>
+				</div>
+				<div class="header-right">
+					<a href="#"><img src="img/br.jpg" alt="site em português"></a>
+					<a href="#"><img src="img/us.jpg" alt="site em inglês"></a>
+					<ul>
+						<li><a href="#" class="header-alterar_senha">Alterar senha</a></li>
+						<li><a href="#" class="header-sair">Sair</a></li>
+					</ul>
+				</div>
+				<div class="clear"></div>
+				<nav>
+					<ul>
+						<li><a href="lista-prop.html" class="header-proponente">Proponentes</a></li>
+						<li><a href="#" class="header-dashboard">Dashboard</a></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="content">
+				<h1 class="titulo_pagina">dashboard</h1>
+				<section class="dash-top_content">
+					<ul class="dash-select_charts">
+						<li class="etiqueta">sexo <span>Masculino</span><a href="#" class="excluir"></a></li>
+						<li class="etiqueta">idade <span>26-30</span><a href="#" class="excluir"></a></li>
+						<li class="etiqueta">imc <span>obesidade grau II</span><a href="#" class="excluir"></a></li>
+						<li class="etiqueta">fumante <span>não</span><a href="#" class="excluir"></a></li>
+					</ul>
+					<div class="dash-export_chart">
+						<p>Essa combinação resultou em</p>
+						<p><span>256</span> Proponentes</p>
+						<a href="#">Exportar</a>
+					</div>
+				</section>
+				<div class="clear"></div>
+				<section class="dash-charts">
+					<div class="chart1">
+						<h1 class="title_chart">Quantidade de casos por mês</h1>
+						<div id="qtd-mes" style="width: 100%; height: 400px;"></div>
+					</div>
+					<div class="charts_2-3">
+						<div class="chart2">
+							<h1 class="title_chart">sexo</h1>
+							<div id="sexo" style="width: 100%; height: 200px;"></div>
+						</div>
+						<div class="chart3">
+							<h1 class="title_chart">idade</h1>
+							<div id="idade" style="width: 100%; height: 200px;"></div>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="charts_4-5">
+						<div class="chart4">
+							<h1 class="title_chart">IMC</h1>
+							<div id="imc" style="width: 100%; height: 200px;"></div>
+						</div>
+						<div class="chart5">
+							<h1 class="title_chart">Situação</h1>
+							<div id="situacao" style="width: 100%; height: 200px;"></div>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="charts_6-7-8-9">
+						<div class="chart6">
+							<h1 class="title_chart">Diabetes</h1>
+							<div id="diabetes" style="width: 100%; height: 200px;"></div>
+						</div>
+						<div class="chart7">
+							<h1 class="title_chart">Câncer</h1>
+							<div id="cancer" style="width: 100%; height: 200px;"></div>
+						</div>
+						<div class="chart8">
+							<h1 class="title_chart">Hipertensão arterial</h1>
+							<div id="hipertensao" style="width: 100%; height: 200px;"></div>
+						</div>
+						<div class="chart9">
+							<h1 class="title_chart">Fumante</h1>
+							<div id="fumante" style="width: 100%; height: 200px;"></div>
+						</div>
+						
+					</div>
+					<div class="clear"></div>
+				</section>
+			</div>
+		</div>
+	</body>
+</html>
